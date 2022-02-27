@@ -23,7 +23,7 @@ module.exports = (sequelize) => {
             allowNull: false,
         },
         password: {
-            type: DataTypes.CHAR(72),
+            type: DataTypes.CHAR(40),
             allowNull: false
         }
     })

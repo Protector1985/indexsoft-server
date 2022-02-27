@@ -42,9 +42,9 @@ class UserService{
         }
     }
 
-    async updateUser(user_id, first_name, last_name, birthday, gender_id) {
+    async updateUser(user_id, first_name, last_name, birthday, gender_id, password) {
         try {
-            const user = await this.models.user.update({first_name: first_name, last_name: last_name, birthday: birthday, gender_id: gender_id}, {where: {user_id: user_id}})
+            const user = await this.models.user.update({first_name: first_name, last_name: last_name, birthday: birthday, gender_id: gender_id, password: password}, {where: {user_id: user_id}})
             return {type:"SUCCESS", user: user};
         } catch(error) {
             return {type:"ERROR", msg: "USER_UPDATE_ERROR"};

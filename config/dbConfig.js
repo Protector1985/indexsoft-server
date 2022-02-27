@@ -3,12 +3,12 @@
 module.exports = {
     mysql: {
         options: {
-                host: "127.0.0.1",
-                port: "3306", 
+                host: process.env.db_address,
+                port: process.env.db_port, 
                 database: "sys", 
-                username: "root", 
-                password: "admin", 
-                dialect: "mysql",   
+                username: process.env.db_user, 
+                password: process.env.db_pass, 
+                dialect: process.env.db_dialect,   
                 },
                 client: null
             }    
